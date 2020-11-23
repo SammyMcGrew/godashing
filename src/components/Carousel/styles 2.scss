@@ -1,0 +1,26 @@
+.image-wrapper {
+    position:relative;
+    height:0;
+    padding-bottom:50%; /* aspect ratio of the image ( ( 640 / 1280 ) * 100% ; ) */
+}
+.image-wrapper > img {
+    position:absolute;
+    top:20px;
+    left:0;
+    max-width:100%;
+}
+
+.slick-dots{
+    position: absolute;
+    bottom: -25px;
+    
+    display: block;
+    
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    list-style: none;
+    
+    text-align: center;
+    }

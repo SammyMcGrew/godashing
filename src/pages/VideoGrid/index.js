@@ -8,13 +8,8 @@ import {ZiggeoPlayer} from 'react-ziggeo';
 
 
 
-<<<<<<< HEAD
-import './style.scss';
-// const result: any = useSelector(selector: Function, equalityFn?: Function)
-=======
 import './styles.scss';
 
->>>>>>> master
 
 
 class VideoGrid extends Component {
@@ -47,15 +42,8 @@ class VideoGrid extends Component {
                         </ziggeorecorder>
                         </Row>
                     </Col>
-<<<<<<< HEAD
-            </Container>
-            <Container className= 'gridTest'>
-                <Col>
-                <ZiggeoPlayer
-=======
                    
                    <ZiggeoPlayer
->>>>>>> master
                    apiKey={'a293c346773385bae50fb960f2210d2d'}
                    video={'a741bfcb8dd370845ef2393ca614dc85'}
                    theme={'mminimalist'}
@@ -64,20 +52,10 @@ class VideoGrid extends Component {
                    onPlaying={this.playing}
                    onPaused={this.paused}
                  />
-<<<<<<< HEAD
-                 
-                </Col>
-                
-
-            </Container>
-            </div> 
-                             
-=======
 
             </Container>
             </div>
     
->>>>>>> master
         )
         
     }

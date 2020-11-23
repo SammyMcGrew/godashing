@@ -6,12 +6,8 @@ import VideoGrid from './../VideoGrid';
 import './styles.scss';
 import store from '../../redux/createStore';
 
-<<<<<<< HEAD
-
-=======
 //employeeLogin && signup parent comp.
 //dashboard is child comp.
->>>>>>> master
 const Dashboard = props => {
     const [subscriptionStatus, dispatch] = useReducer(userReducer, userTypes.SUBSCRIPTION_STATUS);
     const [ subscriptionActive, setSubscription ] = useState(false);
