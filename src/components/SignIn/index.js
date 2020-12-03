@@ -7,6 +7,7 @@ import './styles.scss';
 import AuthWrapper from './../AuthWrapper';
 import FormInput from './../forms/FormInput';
 import Button from './../forms/Button';
+import VideoTag from "./../VideoTag";
 
 const mapState = ({ user }) => ({
     currentUser: user.currentUser
@@ -20,10 +21,10 @@ const SignIn = props => {
     const [password, setPassword] = useState('');
 
     useEffect(() => {
-     if (currentUser && isSubscribed ) {
-        resetForm();
-        history.push('/');
-      }
+        if (currentUser && isSubscribed) {
+            resetForm();
+            history.push('/');
+        }
 
     }, [currentUser]);
 
@@ -41,54 +42,66 @@ const SignIn = props => {
         dispatch(googleSignInStart());
     }
 
-    
+
     const configAuthWrapper = {
-            headline: 'LogIn'
-        };
-
-     return (
-         <AuthWrapper {...configAuthWrapper}>
-             <div className='formWrap'>
-                 <form onSubmit={handleSubmit}>
-
-                  <FormInput
-                    type='email'
-                    name='email'
-                    value={email}
-                    placeholder='Email'
-                    handleChange={e => setEmail(e.target.value)}
-                  />
-
-                 <FormInput
-                    type='password'
-                    name='password'
-                    value={password}
-                    placeholder='Password'
-                    handleChange={e => setPassword(e.target.value)}
-                />
+        headline: 'LogIn'
+    };
 
 
-                <Button type='submit'>
-                  Submit
-                </Button>
+    const elementToDisplay = document.getElementById('elementToDisplay');
+    let tag;
+    document.getElementById("addTag").onclick = () => {
+        tag = document.getElementById("videoTag").value;
+        elementToDisplay.innerHTML = `<div id="item"><ziggeorecorder id="recorder-embedding" ziggeo-tags='${tag}' ziggeo-width=640 ziggeo-height=480 ziggeo-theme="minimalist" ziggeo-themecolor="red"></ziggeorecorder><div id="nextAction"></div></div>`;
+    };
 
-                <div className='socialSignin'>
-                 <div className='row'>
-                     <Button onClick={handleGoogleSignIn}>
-                      Sign in with Google
+    return (
+        <AuthWrapper {...configAuthWrapper}>
+            {/* <VideoTag> */}
+            
+            <div className='formWrap'>
+                <form onSubmit={handleSubmit}>
+
+                    <FormInput
+                        type='email'
+                        name='email'
+                        value={email}
+                        placeholder='Email'
+                        id='videoTag'
+                        handleChange={e => setEmail(e.target.value)}
+                    />
+
+                    <FormInput
+                        type='password'
+                        name='password'
+                        value={password}
+                        placeholder='Password'
+                        handleChange={e => setPassword(e.target.value)}
+                    />
+
+
+                    <Button type='button' id="addTag">
+                        Submit
                     </Button>
-                            </div>
-                        </div>
 
-                        <div className='links'>
-                            <Link to='/recovery'>
-                                Reset Password
-                            </Link>
+                    <div className='socialSignin'>
+                        <div className='row'>
+                            <Button onClick={handleGoogleSignIn}>
+                                Sign in with Google
+                            </Button>
                         </div>
-                    </form>
-                </div>
-            </AuthWrapper>
-        );
-    }
+                    </div>
+
+                    <div className='links'>
+                        <Link to='/recovery'>
+                            Reset Password
+                        </Link>
+                    </div>
+                </form>
+            </div>
+           {/* </VideoTag> */}
+        </AuthWrapper>
+    );
+}
 
 export default SignIn;
