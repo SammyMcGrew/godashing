@@ -93,7 +93,8 @@ export const ziggeoRecorderAttributesPropTypes = {
     'fittodimensions': bool,
 
     // Data parameters
-    'tags': arrayOf(string),
+    // 'tags': arrayOf(string),
+    'tags': ['test', 'test1'],
     'custom-data':	object,
     'title':	string,
     'description': string,

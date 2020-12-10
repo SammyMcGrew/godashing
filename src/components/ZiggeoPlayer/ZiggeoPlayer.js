@@ -24,8 +24,8 @@ ziggeoApp.on("ready", function() {
     var ziggeoApp = new ZiggeoApi.V2.Player({
         element: document.getElementById("replace_me_v2_player"),
         attrs: {
-            width: 320,
-            height: 180,
+            width: "",
+            height: "",
             theme: "modern",
             themecolor: "purple",
             video: "_sample_video"

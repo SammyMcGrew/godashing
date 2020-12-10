@@ -70,6 +70,7 @@ const ZiggeoRecorder = ({ app, ...props }) =>  {
   const ziggeoAttributes = () => {
     return Object.keys(props).filter(k => Object.assign(ziggeoRecorderAttributesPropTypes, ziggeoPlayerApplicationOptions)[k]).reduce((attr, k) => {
       attr[k.replace(/^_/g, '')] = props[k];
+      console.log("Ziggeo Attributes", attr);
       return attr;
     }, {});
   };
@@ -81,7 +82,9 @@ const ZiggeoRecorder = ({ app, ...props }) =>  {
   const ziggeoElementProps = () => {
     return Object.keys(props).filter(k => !ZiggeoRecorder.propTypes[k]).reduce((attr, k) => {
       attr[k] = props[k];
+      console.log("Element Props", attr);
       return attr;
+    
     }, {});
   };
 

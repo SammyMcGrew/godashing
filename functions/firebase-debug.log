@@ -1,0 +1,47 @@
+[debug] [2020-12-07T01:06:57.262Z] ----------------------------------------------------------------------
+[debug] [2020-12-07T01:06:57.264Z] Command:       /usr/local/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2020-12-07T01:06:57.264Z] CLI Version:   8.16.2
+[debug] [2020-12-07T01:06:57.264Z] Platform:      darwin
+[debug] [2020-12-07T01:06:57.265Z] Node Version:  v12.19.0
+[debug] [2020-12-07T01:06:57.266Z] Time:          Sun Dec 06 2020 18:06:57 GMT-0700 (Mountain Standard Time)
+[debug] [2020-12-07T01:06:57.266Z] ----------------------------------------------------------------------
+[debug] [2020-12-07T01:06:57.266Z] 
+[debug] [2020-12-07T01:06:57.268Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2020-12-07T01:06:57.291Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-07T01:06:57.291Z] > authorizing via signed-in user
+[debug] [2020-12-07T01:06:57.291Z] [iam] checking project godashing-bc27e for permissions ["firebase.projects.get"]
+[debug] [2020-12-07T01:06:57.293Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-12-07T01:06:57.293Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-07T01:06:57.604Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2020-12-07T01:06:57.605Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2020-12-07T01:06:57.674Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Mon, 07 Dec 2020 01:06:57 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-07T01:06:57.688Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/godashing-bc27e:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-12-07T01:06:58.202Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 07 Dec 2020 01:06:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=174","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-07T01:06:58.220Z] [functions] Using node@12 from host.
+[debug] [2020-12-07T01:06:58.222Z] defaultcredentials: writing to file /Users/oliviakatelyn/.config/firebase/theoliviakatelyn_gmail_com_application_default_credentials.json
+[debug] [2020-12-07T01:06:58.224Z] DEBUG: Setting GAC to /Users/oliviakatelyn/.config/firebase/theoliviakatelyn_gmail_com_application_default_credentials.json
+[debug] [2020-12-07T01:06:58.232Z] [functions] Watching "/Users/oliviakatelyn/Documents/godashing_frontend/functions" for Cloud Functions...
+[debug] [2020-12-07T01:06:58.242Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-12-07T01:06:58.242Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-12-07T01:06:58.242Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-12-07T01:06:58.242Z] DEBUG: [worker-~diagnostic~-805f21f0-f1e4-4d9e-ba76-7ee16ee28e3a]: Assigning socketPath: /var/folders/c4/4h73lxtx5rzcb6mhn7np621h0000gn/T/fire_emu_1707.sock
+[debug] [2020-12-07T01:06:58.243Z] DEBUG: [worker-~diagnostic~-805f21f0-f1e4-4d9e-ba76-7ee16ee28e3a]: BUSY
+[debug] [2020-12-07T01:06:58.464Z] DEBUG: [runtime-status] [1707] Functions runtime initialized. {"cwd":"/Users/oliviakatelyn/Documents/godashing_frontend/functions","node_version":"12.19.0"}
+[debug] [2020-12-07T01:06:58.465Z] DEBUG: [runtime-status] [1707] Disabled runtime features: undefined
+[debug] [2020-12-07T01:06:58.467Z] DEBUG: [runtime-status] [1707] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.4.1","resolution":"/Users/oliviakatelyn/Documents/godashing_frontend/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-12-07T01:06:58.469Z] DEBUG: [runtime-status] [1707] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.12.0","resolution":"/Users/oliviakatelyn/Documents/godashing_frontend/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-12-07T01:06:58.470Z] DEBUG: [runtime-status] [1707] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.12.0","resolution":"/Users/oliviakatelyn/Documents/godashing_frontend/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-12-07T01:06:58.472Z] DEBUG: [runtime-status] [1707] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-12-07T01:06:58.473Z] DEBUG: [runtime-status] [1707] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.12.0","resolution":"/Users/oliviakatelyn/Documents/godashing_frontend/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-12-07T01:06:58.526Z] DEBUG: [runtime-status] [1707] Checked functions.config() {"config":{}}
+[debug] [2020-12-07T01:06:58.527Z] DEBUG: [runtime-status] [1707] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.12.0","resolution":"/Users/oliviakatelyn/Documents/godashing_frontend/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-12-07T01:06:58.527Z] DEBUG: [runtime-status] [1707] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.12.0","resolution":"/Users/oliviakatelyn/Documents/godashing_frontend/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-12-07T01:06:58.527Z] DEBUG: [runtime-status] [1707] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.4.1","resolution":"/Users/oliviakatelyn/Documents/godashing_frontend/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-12-07T01:06:58.528Z] DEBUG: [runtime-status] [1707] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.12.0","resolution":"/Users/oliviakatelyn/Documents/godashing_frontend/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-12-07T01:06:58.528Z] DEBUG: [runtime-status] [1707] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.4.1","resolution":"/Users/oliviakatelyn/Documents/godashing_frontend/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-12-07T01:06:58.635Z] [functions[api]] http function initialized (http://localhost:5000/godashing-bc27e/us-central1/api).
+[info] i  functions: Loaded functions: api 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub 
+[debug] [2020-12-07T01:06:58.645Z] DEBUG: [worker-~diagnostic~-805f21f0-f1e4-4d9e-ba76-7ee16ee28e3a]: IDLE

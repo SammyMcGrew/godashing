@@ -8,6 +8,7 @@ import AdminToolbar from './components/AdminToolbar';
 import Paypal from './components/Payment/Paypal';
 import CheckoutForm from './components/Payment/Stripe/CardInput';
 import Carousel from './components/Carousel';
+import CardInput from './components/Payment/Stripe/CardInput';
 
 // import ProtectedRoute from './components/ProtectedRoute';
 
@@ -25,6 +26,7 @@ import DashboardLayout from './layouts/DashboardLayout';
 import Homepage from './pages/Homepage';
 import Search from './pages/Search';
 import About from './pages/About';
+import Team from './pages/Team';
 import Contact from './pages/Contact';
 import EmployeeSignup from './components/Registration/EmployeeSignup';
 import EmployerSignup from './components/Registration/EmployerSignup';
@@ -33,8 +35,9 @@ import Recovery from './pages/Recovery';
 import Dashboard from './pages/Dashboard';
 import Admin from './pages/Admin';
 import VideoGrid from './pages/VideoGrid';
+import Payment from './pages/Payment';
 import './default.scss';
-import CardInput from './components/Payment/Stripe/CardInput';
+
 
 
 const App = props => {
@@ -64,6 +67,11 @@ const App = props => {
         <Route path="/search/:filterType" render={() => (
           <MainLayout>
             <Search />
+          </MainLayout>
+        )} />
+        <Route path='/payment' render={() => (
+          <MainLayout>
+            <Payment />
           </MainLayout>
         )} />
           <Route path='/employeeregistration' render={() =>  (
@@ -107,6 +115,12 @@ const App = props => {
         render={() => (
           <MainLayout>
             <About />
+          </MainLayout>
+        )} />
+          <Route path='/Team'
+        render={() => (
+          <MainLayout>
+            <Team />
           </MainLayout>
         )} />
           <Route path='/videogrid' render={() => (

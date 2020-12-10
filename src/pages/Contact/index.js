@@ -3,37 +3,22 @@ import React from 'react';
 import Passion from './../../assets/contact.png';
 import './styles.scss';
 
-// export default React.createClass ({
-  
-//     render() {
-//         var background = {backgroundSize : 'cover'};
-//         var textStyle = {
-//           position: 'absolute', 
-//           top: '50%', 
-//           left: '50%'
-//         };
 
-//         return (
-//             <div style={{width: 'auto'}}>
-//                 <img 
-//                   style={background} responsive 
-//                   src='https://unsplash.com/photos/TamMbr4okv4'
-//                 </img>
-//                 <h1 style={textStyle}>Text over image</h1>
-//             </div>
-//         );
-//     }
-
-// });
 const Contact = props => {
     return (
-
-    <div className="background">
-        <img src={Passion} />
-        <div className='box'>
-        <h3>Looking to connect?</h3></div>
-    </div>
+<div className='contact'> 
+        <div class="icon-bar">
+            <a href="https://www.facebook.com/DashingCo-113381857100452/" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="google"><i class="fa fa-google"></i></a>
+            <a href="https://www.instagram.com/dashingco/" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            
+        </div>
+        </div>
     );
 };
 
 export default Contact;
+
+// note to self: 
+// refer to team page styling to align carousel images horizontally
